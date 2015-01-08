@@ -18,6 +18,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'angular.min.js',
+      'ui-bootstrap-tpls-0.12.0.js',
       'angular-mocks.js',
       'controller.js',
       'controllerSpec.js'
