@@ -3,6 +3,9 @@ angular.module('notesApp', [])
     return {
         sayHello: function() {
             return "Hello, World!"
+        },
+        getdata: function() {
+            return "data"
         }
     };
 }) .controller('ListCtrl', ['helloWorld', function(helloWorld) {
