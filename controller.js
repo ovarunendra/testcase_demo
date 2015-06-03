@@ -1,7 +1,14 @@
 angular.module('notesApp', [])
-    .controller('ListCtrl', [function() {
+.factory('helloWorld', function() {
+    return {
+        sayHello: function() {
+            return "Hello, World!"
+        }
+    };
+}) .controller('ListCtrl', ['helloWorld', function(helloWorld) {
 
         var self = this;
+        self.serviceData = helloWorld.sayHello();
         self.items = [
             {id: 1, label: 'First', done: true},
             {id: 2, label: 'Second', done: false}
