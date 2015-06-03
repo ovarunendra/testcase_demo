@@ -2,19 +2,25 @@ describe('Controller: ListCtrl', function() {
     // Instantiate a new version of my module before each test
     beforeEach(module('notesApp'));
 
-    var ctrl;
+    var ctrl, testService;
 
     // Before each unit test, instantiate a new instance
     // of the controller
-    beforeEach(inject(function($controller) {
+    beforeEach(inject(function($controller, helloWorld) {
+        testService = helloWorld;
         ctrl = $controller('ListCtrl');
     }));
 
     it('should have items available on load', function() {
+        expect(ctrl.serviceData).toEqual("Hello, World!");
         expect(ctrl.items).toEqual([
             {id: 1, label: 'First', done: true},
             {id: 2, label: 'Second', done: false}
         ]);
+    });
+    it('get service data', function() {
+        var data = testService.getdata()
+        expect(data).toEqual("data");
     });
 
     it('should have highlight items based on state', function() {
