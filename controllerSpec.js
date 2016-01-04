@@ -14,7 +14,7 @@ describe('Controller: ListCtrl', function() {
     it('should have items available on load', function() {
         expect(ctrl.serviceData).toEqual("Hello, World!");
         expect(ctrl.items).toEqual([
-            {id: 1, label: 'First', done: false},
+            {id: 1, label: 'First', done: true},
             {id: 2, label: 'Second', done: false}
         ]);
     });
